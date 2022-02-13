@@ -35,25 +35,72 @@
        </ul>
 
 <section>
+    <form class="filter" method="get" action="#">
 <h3>Производители:</h3>
 <ul>
-    <li>Baxter of california</li>
-    <li>Mr Natty</li>
-    <li>Suavecito</li>
-    <li>Malin-goetz</li>
-    <li>Murray`s</li>
-    <li>American crew</li>
+    <li>
+        <input type="checkbox" name="baxter-of-california" id="filter-baxter-of-california" checked>
+        <label for="filter-baxter-of-california">
+            Baxter of california   
+        </label>
+        </li>
+    <li>
+        <input type="checkbox" name="mr-natty" id="filter-mr-natty" checked>
+        <label for="filter-mr-natty">
+            Mr Natty
+        </label>    
+        </li>
+    <li>
+        <input type="checkbox" name="suavecito" id="filter-suavecito" checked>
+        <label for="filter-suavecito">
+            Suavecito
+        </label>    
+        </li>
+    <li>
+        <input type="checkbox" name="malin-goetz" id="filter-malin-goetz" checked>
+        <label for="filter-malin-goetz">
+            Malin-goetz
+        </label>    
+        </li>
+    <li>
+        <input type="checkbox" name="murray`s" id="filter-murray`s" checked>
+        <label for="filter-murray`s">
+            Murray`s
+        </label>    
+        </li>
+    <li>
+        <input type="checkbox" name="american-crew" id="filter-american-crew" checked>
+        <label for="filter-american-crew">
+            American crew 
+        </label>    
+       </li>
 </ul>
 </section>
 
 <section>
  <h3>Группы товаров:</h3>
 <ul>
-    <li>Бритвенные принадлежности</li>
-    <li>Средства для ухода</li>
-    <li>Аксессуары</li>
+    <li>
+        <input type="radio" name="product-group" value="shaving" id="filter-shave" checked>
+        <label for="filter-shave">
+            Бритвенные принадлежности  
+        </label>
+        </li>
+    <li>
+        <input type="radio" name="product-group" value="hair-care" id="filter-care" checked>
+        <label for="filter-care">
+            Средства для ухода 
+        </label>
+        </li>
+    <li>
+        <input type="radio" name="product-group" value="accessories" id="filter-accessories">
+        <label for="filter-accessories">
+            САксессуары
+        </label>
+        </li>
 </ul>
 <button type="button">Показать</button> 
+</form>
  </section>
 
  <section>

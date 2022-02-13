@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>barber</title>
-    <link rel="stylesheet" href="./svg/css.css">
+    <link href="./style/normalize.webarchive" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
 
 </head>
 <body>
 
 
-<header>
-   <nav>
-       <a>
-       <img src="./svg/index-logo.svg" width="368" height="200"
+<header class="main-header">
+   <nav class="main-navigation">
+       <a class="main-neader-logo"> <img src="./svg/index-logo.svg" width="100" height="100"
        alt="Логотип Барбершопа">
-       </a>
-       <ul>
+       </a> 
+       <ul class="site-navigation"> 
            <li><a href="info.html">Информация</a> </li>
            <li><a href="news.html">Новости</a> </li>
            <li><a href="price.html">Прайс-лист</a> </li>
@@ -23,33 +23,38 @@
            <li><a href="contacts.html">Контакты</a> </li>
        </ul>
        <ul>
-           <li>
-               <button type="button">Войти</button>
+           <li class="user-navigation">
+              <a class="login-link" href="login.html">Вход</a>
            </li>
        </ul>
    </nav>
 </header>
 
+<a>
+    <img src="./svg/index-logo.svg" width="100" height="100"
+    alt="Логотип Барбершопа">
+    </a>
 
-<main>
-    <h1>Барбершоп Бородинский</h1>
 
-    <section>
+< class="container">
+    <h1 class="visually-hidden">Барбершоп Бородинский</h1>
+
+    <section class="features"> 
       <h2>Преимущества</h2>
-        <ul>
-            <li>
+        <ul class="featurest-listf">
+            <li class="feature-item"> 
                 <h3>Быстро</h3>
                 <p> Мы сделаем свою работу быстро! Два часа
                     пролетят незмаетнои вы - счастливый
                     обладатель стильной стрижки-минутки!</p>
             </li>
-            <li>
+            <li class="feature-item">
             <h3>Круто</h3>
             <p> Забудьте как вы стриглись раньше.
                 Мы сделаем из вас звезду футбола или кино!
                 Во всяком случае внешне.</p>
             </li>
-            <li>
+            <li class="feature-item">
                 <h3>Дорого</h3>
                 <p> Наши мастера - профессионалы своего дела и
                     не могут стоить дешевле.К тому же, разве цена
@@ -58,15 +63,16 @@
         </ul>
     </section>
 
-    <section>
+    <div class="index-columns">
+    <section class="news">
         <h2>Новости</h2>
-        <ul>
-            <li>
+        <ul class="news-list">
+            <li class="news-item">
                 <p>Нам наконец завезли ягермайстер!Теперь вы можете
                 пропустить стаканчик во время стрижки</p>
                 <time datatype="1999-02-25"> 25 февраля</time>
             </li>
-            <li>
+            <li class="nwes-item">
                 <p>В нашей команде пополнение,Борис "Бритва" Стригунец,
                 обладатель множества титулов и наград пополнил наши
                 стройные ряды
@@ -74,21 +80,23 @@
                 <time datatype="1999-02-27">27 февраля</time>
             </li>
         </ul>
-        <a href="news.html">Все новости</a>
+        <a  class="button" href="news.html">Все новости</a>
     </section>
 
-    <section>
+    <section class="gallery">
         <h2>Фотогалерея</h2>
-        <figure>
+        <figure class="gallery-content">
             <a href="#">
                 <img src="svg/studio.jpg" width="300" height="200" alt="Интерьер">
             </a>
         </figure>
-        <button type="button">Назад</button>
-        <button type="button">Вперед</button>
+        <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+        <button class="button gallery-button gallery-button-next type="button">Вперед</button>
     </section>
+    </div>
 
-    <section>
+    <div class="index-columns">
+    <section class="contacts"> 
         <h2>Контактная информация</h2>
         <p> Барберщоп "Бородинский"<br>
             Адрес: г.Каменское, ул. Интерн. 4б<br>
@@ -99,44 +107,95 @@
            Пн-Пт: с 10:00 до 22:00<br>
            Сб-Вс: с 10:00 до 19:00
         </p>
-        <a href="map.httml">Как проехать</a>
-        <a href="contacts.html">Обратная связь</a>
+        <a class="button" href="map.httml">Как проехать</a>
+        <a class="button" href="contacts.html">Обратная связь</a>
     </section>
 
-    <section>
+    <section class="appointment">
         <h2>Записаться</h2>
-        <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+        <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+        <form class="appointment-form" action="#" method="post">
+            <p class="appointment-item">
+                <label for="appointment-date">Дата</label>
+                <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2021">
+            </p>
+        </form>
+        <form class="appointment-form" action="#" method="post">
+            <p class="appointment-item">
+                <label for="appointment-time">Время</label>
+                <input type="text" name="time" value="" placeholder="10:00">
+            </p>
+        </form>
+        <form class="appointment-form" action="#" method="post">
+            <p class="appointment-item">
+                <label for="appointment-User-name">Ваше Имя</label>
+                <input type="text" name="User-name" value="" placeholder="Борода">
+            </p>
+        </form>
+        <form class="appointment-form" action="#" method="post">
+            <p class="appointment-item">
+                <label for="appointment-Phone-number">Телефон</label>
+                <input type="text" name="Phone-number" value="" placeholder="+3 809-836-309-39">
+            </p>
+        </form>
         <!--Здесь будет форма -->
     </section>
+    </div>
+
 </main>
-<footer>
-    <p> Барберщоп "Бородинский"<br>
+<footer class="main-footer">
+    <p class="footer-contacts"> Барберщоп "Бородинский"<br>
         Адрес: г.Каменское, ул. Интерн. 4б<br>
         <a href="map.html">Как нас найти?</a> <br>
         телефон: 098 363 09 39
     </p>
-    <div>
+    <div class="footer-social">
         <p>Давайте дружить!</p>
-        <a href="#">Вконтакте</a>
-        <a href="#">Инстаграмм</a>
-        <a href="#">Фейсбук</a>
+    <ul>
+        <li> <a class="social-button" href="#">Вконтакте</a></li>
+        <li> <a class="social-button" href="#">Инстаграмм</a></li>
+        <li> <a class="social-button" href="#">Фейсбук</a></li>
+     </ul>
     </div>
 <div>
     <p>Кем разработано</p>
-    <a href="#">Безкровным А.А.</a>
+    <a class="social-button" href="#">Безкровным А.А.</a>
 </div>
 </footer>
 
-<section>
+<section class="modal modal-login">
     <h2>Личный кабинет</h2>
     <p>Введите свой логин и пароль.</p>
-    <!--Здесь будет форма -->
-    <button type="button">Закрыть</button>
+    
+        <form class="login-form" method="post"
+        action="#">
+        <p>
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input class="login-icon-user" id="user-login" type="text"
+            name="login" placeholder="Логин">
+        </p>
+        <p>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input class="login-icon-password" id="user-password" type="password"
+            name="password" placeholder="Пароль">
+        </p>
+        <p class="login-password-info">
+        <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            Запомните меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль</a>
+        </p>
+        <button class="button" type="submit">Войти</button>          
+    
+    <button class="modal-close" type="button">Закрыть</button>
 </section>
 
-<section>
-    <h2>Как до нас добраться</h2>
-     <button type="button">Закрыть</button>
+<section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <p>map</p>
+     <button class="modal-close" type="button">Закрыть</button>
 </section>
 </body>
 </html>
